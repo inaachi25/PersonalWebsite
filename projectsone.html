@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaina Mae Totisano | Portfolio</title>
+    <link rel ="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+         <!--Navigation Bar-->
+        <header>
+            <a href="index.html" class="logo">Shaina Mae Totisano</a>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="projects.html"class="active">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1UCUB1eusjHwsZqZxfhjhnn54AL6L_iNE/view?usp=sharing">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                  <button
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                    class="activeone"
+                    style="background:#e3f3cc; border:solid 1px black; cursor:pointer; font-size:inherit; font-family:inherit; color:inherit;"
+                  >
+                    Contact
+                  </button>
+                </li>
+              </ul>
+            </nav>
+        </header>
+
+        <!--Main Content-->
+        <img src="assets/firstproj.png" alt="Header image" style="width: 100%; height: 300px; object-fit: cover;  border-radius: 30px;">
+
+
+        <style>
+          .paragraph strong {
+              color: #8cb5c1;
+              text-decoration: underline;
+        }
+            h1 {
+            font-size: 40px;
+            font-weight: bold;
+            }
+            h3 {
+            font-size: 15px;
+            color: #b0b0b0;
+            font-weight: lighter;
+            }
+            .subhead {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #333;
+            max-width: 1100px;        
+
+            }
+            .info {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: none;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 12px 0;
+            box-sizing: border-box;   
+            }
+            .info-block {
+            font-size: 15px;
+            flex: 1 1 0;
+            border: none;
+            padding: 0 9px;
+            min-width: 0;
+            box-sizing: border-box;
+            border-right: 1px solid #ddd;
+            align-items: left;
+                }
+            .info-block strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 2px;
+            }
+
+            .info-block:last-child {
+            border-right: none;
+            }
+            .paragraph {
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 1100px;  
+            }
+
+            .light-divider {
+            border: none;
+            border-top: 1px solid #ccc; /* Light black/gray */
+            margin: 24px 0;
+            }
+
+            .testimonial-carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 40px auto 24px auto;
+            background: #f9f9f9;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 32px 24px 40px 24px;
+            overflow: hidden;
+            text-align: center;
+            }
+            .testimonial-slide {
+            display: none;
+            transition: opacity 0.5s;
+            }
+            .testimonial-slide.active {
+            display: block;
+            }
+            .testimonial-text {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 18px;
+            font-style: italic;
+            }
+            .testimonial-author {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 500;
+            }
+            .testimonial-prev, .testimonial-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #8cb5c1;
+            border: 1px solid #bbb;
+            color: #333;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.2s;
+            }
+            .testimonial-prev:hover, .testimonial-next:hover {
+            background: #d2e5e8;
+            }
+            .testimonial-prev { left: 16px; }
+            .testimonial-next { right: 16px; }
+
+            .process-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin: 32px auto 40px auto;
+            max-width: 1200px;
+            }
+            .process-card {
+            background: #f9f9f9;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 24px 20px 20px 20px;
+            width: 300px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            transition: transform 0.2s;
+            }
+            .process-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+            }
+            .process-step {
+            background: #8cb5c1;
+            color: #333;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            position: absolute;
+            top: -19px;
+            left: 16px;
+            border: 2px solid #b5d6a7;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            }
+            .process-card strong {
+            margin-top: 28px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #2d4a22;
+            }
+            .process-card p {
+            font-size: 1rem;
+            color: #444;
+            margin: 0;
+}
+
+        </style>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        let testimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        function showTestimonial(n) {
+            testimonials.forEach((slide, i) => {
+            slide.classList.toggle('active', i === n);
+            });
+        }
+        window.moveTestimonial = function(n) {
+            testimonialIndex += n;
+            if (testimonialIndex < 0) testimonialIndex = testimonials.length - 1;
+            if (testimonialIndex >= testimonials.length) testimonialIndex = 0;
+            showTestimonial(testimonialIndex);
+        };
+        showTestimonial(testimonialIndex);
+        });
+        </script>
+
+        </head>
+        <body>
+
+        <h3>Social Media Management</h3>
+        <h1>Creative Social Media Works</h1>
+
+        <p class="subhead">
+        A curated collection of impactful social media graphics designed to elevate brand presence and engagement for various clients across different industries.
+        </p>
+
+        <!--Overview Section -->
+        <div class="info">
+            <div class="info-block">
+            <strong>Timeline:</strong>
+            March 2020 - August 2024 <br>
+            <strong>Project Type:</strong>
+            Freelance Work
+            </div>
+            <div class="info-block">
+            <strong>Role:</strong>
+            Social Media Manager <br> Graphics Designer
+            </div>
+            <div class="info-block">
+            <strong>Tech Stack:</strong>
+              <ul>
+                    <li>Canva</li>
+                    <li>Meta Business Suite</li>
+                    <li>Google Sheets</li>
+                    <li>Notion</li>
+              </ul>
+            </div>
+            <div class="info-block">
+            <strong>Social Media:</strong>
+             <ul>
+                    <li>Facebook</li>
+                    <li>LinkedIn</li>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+              </ul>
+            </div>
+        </div>
+
+        <p class="paragraph">
+        I have developed original visual concepts and executed dynamic graphic designs tailored to each brand's unique identity and marketing objectives. This involved creating a wide range of assets, from engaging promotional visuals to informative infographic snippets, optimized for various social platforms.
+        I had tackled with <strong>SERVICE-BASED BUSINESSES</strong> like <strong>Business, Sales, Real Estate, Business Tax, Finance Coaches, Food & Beverage </strong>and <strong> Health & Wellness</strong> industries.</p>
+
+        <p class="paragraph">
+        My designs consistently enhanced brand visibility, increased audience engagement, and generated positive client feedback, as evidenced by accompanying testimonials. These visuals played a direct role in reinforcing brand messaging and driving stronger online connections.
+        </p>
+
+        <!-- Skills Section -->
+        <h2 style="text-align: center; margin-top: 40px;">Skills</h2>
+        <div style="display: flex; justify-content: center; gap: 32px; margin: 32px 0;">
+          <div class="objective-card" style="text-align: center; min-width: 180px;">
+            <div class="objective-icon" style="color:#8cb5c1;"><i class="fas fa-paint-brush"></i></div>
+            <strong>Graphic Design</strong>
+          </div>
+          <div class="objective-card" style="text-align: center; min-width: 180px;">
+            <div class="objective-icon" style="color:#8cb5c1;"><i class="fas fa-pen-nib"></i></div>
+            <strong>Content Creation</strong>
+          </div>
+          <div class="objective-card" style="text-align: center; min-width: 180px;">
+            <div class="objective-icon" style="color:#8cb5c1;"><i class="fas fa-lightbulb"></i></div>
+            <strong>Visual Strategy</strong>
+          </div>
+          <div class="objective-card" style="text-align: center; min-width: 180px;">
+            <div class="objective-icon" style="color:#8cb5c1;"><i class="fas fa-users"></i></div>
+            <strong>Community Engagement</strong>
+          </div>
+          <div class="objective-card" style="text-align: center; min-width: 180px;">
+            <div class="objective-icon" style="color:#8cb5c1;"><i class="fas fa-bullseye"></i></div>
+            <strong>Lead Generation</strong>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <!-- Video Section: Two Videos Side by Side -->
+        <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 32px;">
+          <video width="800" controls autoplay loop style="border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+            <source src="assets/smm/Urshaismm.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video width="200" controls autoplay style="border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+            <source src="assets/smm/reel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Testimonial Carousel -->
+        <hr class="light-divider">
+        <h2 style="text-align:center; margin-top:40px;">Social Proof</h2>
+        <div class="testimonial-carousel">
+        <div class="testimonial-slide active">
+            <p class="testimonial-text">"Shaina! I am SO IMPRESSED! Seriously! I am super excited to continue with you and will DEFINITELY be using you for my other social media clients as well!"</p>
+            <p class="testimonial-author">– Lisa</p>
+        </div>
+        <div class="testimonial-slide">
+            <p class="testimonial-text">"Shaina has been very active since day 1. She's a problem solver and has initiative. I admire her dedication and passion to her work. She has helped me with social media content (both captions and graphics) and her works are all commendable. She's always willing to listen and always crave for new learnings. She adapts to new systems/tools very quickly. She's amazing in managing her time and get things done just before the deadline"</p>
+            <p class="testimonial-author">– Yani</p>
+        </div>
+        <div class="testimonial-slide">
+            <p class="testimonial-text">"Shaina Mae Totisano is an excellent social media manager. I've enjoyed working with her due to her independence and capacity to work well. She is detail oriented and consistently completers her task on time. I was thrilled with her entire performance. Highly Recommended."</p>
+            <p class="testimonial-author">– Anna</p>
+        </div>
+        <div class="testimonial-slide">
+            <p class="testimonial-text">"Shai is an excellent member of the team, and I had no issues with the wat she handled her responsibilities. She is always on time with her work and adds to the success of my small business, which I greatly appreciate. As a copywriter, she's one of the best. "</p>
+            <p class="testimonial-author">– Olerie</p>
+        </div>
+        <div class="testimonial-slide">
+            <p class="testimonial-text">"Even for a short length of time, I observed the creativity in the content planning. The material is well-written, trendy, and relevant to the intended audience. The materials are original and interesting.  "</p>
+            <p class="testimonial-author">– Julina</p>
+        </div>
+        <button class="testimonial-prev" onclick="moveTestimonial(-1)">&#10094;</button>
+        <button class="testimonial-next" onclick="moveTestimonial(1)">&#10095;</button>
+        </div>
+
+        <!-- Process Overview -->
+        <hr class="light-divider">
+        <h2 style="text-align:center; margin-top:40px;">Process Overview</h2>
+        <div class="process-cards">
+          <div class="process-card">
+            <div class="process-step">1</div>
+            <strong>Discovery & Goal Setting</strong>
+            <p>Understand the client’s brand, target audience, and objectives through answering a discovery form. Set clear, measurable goals for social media campaigns.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">2</div>
+            <strong>Strategy Proposal + 50% Initial Invoice + Contract</strong>
+            <p>Develop a proposal,outlining the services and strategies, finding common ground in brand messaging and marketing goals.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">3</div>
+            <strong>Onboarding</strong>
+            <p>Welcome Kits and Workspace Overview is provided to the client, ensuring they are familiar with the tools and processes.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">4</div>
+            <strong>Project Deliverables + 50% final invoice</strong>
+            <p>Upon project completion, deliver all assets and documentation. Final invoice is issued for remaining balance.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step">5</div>
+            <strong>Goodbye Kits + Testimonials + Freebies:</strong>
+            <p>Send clients off with a personalized goodbye kit, request testimonials, and offer freebies to maintain goodwill.</p>
+          </div>
+        </div>
+
+        <!-- More Works Section -->
+        <hr class="light-divider">
+        <section style="padding: 30px 0; background-color: #f9f9f9;">
+        <div class="container">
+                <h2 style="text-align: center; margin-bottom: 20px;">More Works</h2>
+                <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+                <!-- Column 1 -->
+                <div class="col-md-6" style="max-width: 360px; text-align: center;">
+                <div class="gallery-title">Meat&Grit</div>
+                <p class="gallery-description">An mobile app for Filipino cuisine, connecting singles through food.</p>
+                <div class="gallery-card">
+                  <img src="assets/fourthproj.png" alt="Mobile Application" class="gallery-image" style="width:100%; border-radius: 12px;">
+                  <div class="overlay-button">
+                    <a href="projectsfour.html" target="_blank" class="view-button">View Project</a>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6" style="max-width: 350px; text-align: center;">
+                <div class="gallery-title">ProSpecs <br> </div>
+                <p class="gallery-description">A job-matching platform connecting job seekers and employers through interests. </p>
+                <div class="gallery-card">
+                <img src="assets/thirdproj.png" alt="Web Application" class="gallery-image" style="width:100%; border-radius: 12px;">
+                <div class="overlay-button">
+                    <a href="projectsthree.html" target="_blank" class="view-button">View Project</a>
+                </div>
+                </div>
+            </div>
+            
+
+            <!-- Column 3 -->
+            <div class="col-md-6" style="max-width: 380px; text-align: center;">
+                <div class="gallery-title">Forecasting Construction Value in Real Estate</div>
+                <p class="gallery-description">A project forecasted residential construction values in the Philippines.</p>
+                <div class="gallery-card">
+                <img src="assets/secondproj.png" alt="Data Analytics" class="gallery-image" style="width:100%; border-radius: 12px;">
+                <div class="overlay-button">
+                    <a href="projectstwo.html" target="_blank" class="view-button">View Project</a>
+                </div>
+                </div>
+            </div>
+        </div>
+          </div>
+
+        <!-- Go Back Up Button -->
+        <button id="backToTopBtn" title="Back to Top">&#8679; Back to Top</button>
+        <script>
+            // Show button when scrolled near bottom
+            window.onscroll = function() {
+                const btn = document.getElementById("backToTopBtn");
+                if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 200)) {
+                btn.style.display = "block";
+                } else {
+                btn.style.display = "none";
+                }
+            };
+
+            // Scroll to top smoothly
+            document.getElementById("backToTopBtn").onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+          </script>
+
+
+        <!-- Scrolling Text -->
+        </section>
+        <hr class="light-divider">
+        <div class="scrolling-text">
+            <div class="scrolling-text-content" id="scrollText">
+                <h2>
+                    Nice to meet you&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                  </h2>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="get-in-touch">
+          <section id="contact">
+            <div class="contact-container">
+              <!-- Left side: Contact Info -->
+              <div class="contact-info">
+                <img src="assets/pfp.png" alt="Your Photo" class="contact-photo">
+                <h3>Shaina Mae Totisano</h3>
+                <p>Student @University of Negros Occidental Recoletos</p>
+                <p>Email: smaetoti10@gmail.com</p>
+              </div>
+        
+              <!-- Right side: Contact Form -->
+              <form action="https://formsubmit.co/smaetoti10@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_redirect" value="https://inaachi25.github.io/PersonalWebsite/projectsone.html">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              
+                <!-- Optional: Disable Formsubmit’s default CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
+              
+                <button type="submit">Send Message</button>
+              </form>
+              
+          </section>
+        </div>
+
+        </body>
+        </html>

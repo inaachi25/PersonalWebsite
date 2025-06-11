@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaina Mae Totisano | Portfolio</title>
+    <link rel ="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+</head>
+    <body>
+        <div class="container">
+            <!--Navigation Bar-->
+            <header>
+                <a href="index.html" class="logo">Shaina Mae Totisano</a>
+                <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="projects.html"class="active">Projects</a></li>
+                    <li><a href="https://drive.google.com/file/d/1UCUB1eusjHwsZqZxfhjhnn54AL6L_iNE/view?usp=sharing">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li>
+                    <button
+                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                        class="activeone"
+                        style="background:#e3f3cc; border:solid 1px black; cursor:pointer; font-size:inherit; font-family:inherit; color:inherit;"
+                    >
+                        Contact
+                    </button>
+                    </li>
+                </ul>
+                </nav>
+                </header>
+
+            <style>
+
+                h1 {
+                font-size: 40px;
+                font-weight: bold;
+                }
+                h3 {
+                font-size: 15px;
+                color: #b0b0b0;
+                font-weight: lighter;
+                }
+                .subhead {
+                margin-bottom: 30px;
+                font-size: 16px;
+                color: #333;
+                max-width: 1100px;        
+
+                }
+                .info {
+                display: flex;
+                gap: 50px;
+                margin: 20px 0;
+                width: 100%;
+                max-width: none;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 12px 0;
+                box-sizing: border-box;   
+                }
+                .info-block {
+                font-size: 16px;
+                flex: 1 1 0;
+                border: none;
+                padding: 0 25px;
+                min-width: 0;
+                box-sizing: border-box;
+                border-right: 1px solid #ddd;
+                align-items: left;
+                    }
+                .info-block strong {
+                display: block;
+                font-size: 18px;
+                margin-bottom: 8px;
+                }
+
+                .info-block:last-child {
+                border-right: none;
+                }
+                .paragraph {
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 1.6;
+                max-width: 1100px; 
+                padding-left: 235px;
+                }
+
+                .light-divider {
+                border: none;
+                border-top: 1px solid #ccc; /* Light black/gray */
+                margin: 24px 0;
+                }
+                </style>
+
+            <!--Main Content-->
+            <img src="assets/background-proj.png" alt="Header image" style="width: 100%; height: 300px; object-fit: cover;  border-radius: 30px;">
+
+            <h3>Industry Category</h3>
+            <h1>Title</h1>
+
+            <!-- Add the Context, The What-->
+            <p class="subhead">
+            A project...
+            </p>
+
+            <hr class="light-divider">
+
+            <!-- Add the Content-->
+
+            <hr class="light-divider">
+        
+            <!-- Scrolling "Contact me" Text -->
+            <div class="scrolling-text">
+            <div class="scrolling-text-content" id="scrollText">
+                <h2>
+                    Nice to meet you&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp;Contact me&nbsp;
+                    </h2>
+        </div>
+            </div>
+
+            <!-- Go Back Up Button -->
+            <button id="backToTopBtn" title="Back to Top">&#8679; Back to Top</button>
+            <script>
+            // Show button when scrolled near bottom
+            window.onscroll = function() {
+                const btn = document.getElementById("backToTopBtn");
+                if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 200)) {
+                btn.style.display = "block";
+                } else {
+                btn.style.display = "none";
+                }
+            };
+
+            // Scroll to top smoothly
+            document.getElementById("backToTopBtn").onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            </script>
+        
+            <!-- Contact Section -->
+            <div class="get-in-touch">
+                    <section id="contact">
+                    <div class="contact-container">
+                        <!-- Left side: Contact Info -->
+                        <div class="contact-info">
+                        <img src="assets/pfp.png" alt="Your Photo" class="contact-photo">
+                        <h3>Shaina Mae Totisano</h3>
+                        <p>Student @University of Negros Occidental Recoletos</p>
+                        <p>Email: smaetoti10@gmail.com</p>
+                        </div>
+                
+                        <!-- Right side: Contact Form -->
+                        <form action="https://formsubmit.co/smaetoti10@gmail.com" method="POST" class="contact-form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        
+                        <!-- Optional: Disable Formsubmit’s default CAPTCHA -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    </section>
+            </div>
+    </body>
+</html>

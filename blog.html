@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaina Mae Totisano | Portfolio</title>
+    <link rel ="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+         <!--Navigation Bar-->
+        <header>
+            <a href="index.html" class="logo">Shaina Mae Totisano</a>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1UCUB1eusjHwsZqZxfhjhnn54AL6L_iNE/view?usp=sharing">Resume</a></li>
+                <li><a href="blog.html"class="active">Blog</a></li>
+                <li>
+                  <button
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                    class="activeone"
+                    style="background:#e3f3cc; border:solid 1px black; cursor:pointer; font-size:inherit; font-family:inherit; color:inherit;"
+                  >Contact
+                  </button>
+                </li>
+              </ul>
+            </nav>
+        </header>
+        
+          <!-- Scrolling "Coming Soon" Text -->
+          <div class="scrolling-text">
+            <div class="scrolling-text-content" id="scrollText">
+                <h2>
+                    Coming Soon&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp; Coming Soon&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp; Coming Soon&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp; Coming Soon&nbsp;
+                    <img src="assets/shine-icon.png" alt="shine" class="shine-icon" />
+                    &nbsp; Coming Soon&nbsp;
+                  </h2>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <div class="get-in-touch">
+          <section id="contact">
+            <div class="contact-container">
+              <!-- Left side: Contact Info -->
+              <div class="contact-info">
+                <img src="assets/pfp.png" alt="Your Photo" class="contact-photo">
+                <h3>Shaina Mae Totisano</h3>
+                <p>Student @University of Negros Occidental Recoletos</p>
+                <p>Email: smaetoti10@gmail.com</p>
+              </div>
+        
+              <!-- Right side: Contact Form -->
+              <form action="https://formsubmit.co/smaetoti10@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_redirect" value="https://inaachi25.github.io/PersonalWebsite/blog.html">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              
+                <!-- Optional: Disable Formsubmit’s default CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
+              
+                <button type="submit">Send Message</button>
+              </form>
+              
+          </section>
+        </div>
+        </body>
+        </html>
+
+        

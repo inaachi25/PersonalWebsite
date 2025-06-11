@@ -13,15 +13,23 @@
     <div class="container">
          <!--Navigation Bar-->
         <header>
-            <a href="#" class="logo">Shaina Mae Totisano</a>
+            <a href="index.html" class="logo">Shaina Mae Totisano</a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
+              <ul>
+                <li><a href="index.html"class="active">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1UCUB1eusjHwsZqZxfhjhnn54AL6L_iNE/view?usp=sharing">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                  <button
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                    class="activeone"
+                    style="background:#e3f3cc; border:solid 1px black; cursor:pointer; font-size:inherit; font-family:inherit; color:inherit;"
+                  >Contact
+                  </button>
+                </li>
+              </ul>
             </nav>
         </header>
         
@@ -39,9 +47,11 @@
           
                 <div class="tag-box">
                   <div class="tag-content">
-                    <span class="arrow-icon-left">
+                    <a href="aboutme.html">
+                      <span class="arrow-icon-left">
                         <img src="assets/arrow-icon.png" alt="Arrow Icon" />
-                    </span>
+                      </span>
+                    </a>
                     <p>tech<br />undergraduate</p>
                   </div>
                 </div>
@@ -49,12 +59,12 @@
           
               <p class="description">
                 I’m a tech undergraduate with experience in social media management, and an aspiring business analyst, project manager, and web designer.
-              </p>
-          
-              <a href="contact.html" class="work-button">
+              </p>      
+              
+              <a href="projects.html" class="work-button">
                 <span class="arrow-icon">
                     <img src="assets/arrow-icon.png" alt="Arrow Icon" />
-                </span> Let’s work together
+                </span> See My Works
               </a>
             </div>
           </section>
@@ -94,122 +104,98 @@
                 <a href="https://www.facebook.com/shainamae.totisano/"><i class="fab fa-facebook"></i> Facebook</a>
             </div>
             </div>
-        
-            <div class="info-grid">
-            <!-- Education -->
-            <div class="info-box green">
-                <h3>Education</h3>
-                <p>Bachelor of Science in Information Technology | University of Negros Occidental-Recoletos, May 2026</p>
-            </div>
-        
-            <!-- Experience -->
-            <div class="info-box light-green">
-               <h2 class="section-title">Experience</h2>
-                    <div class="experience-item">
-                        <p><strong>Brand Design & Marketing Intern |</strong><br>
-                        2024, The Sunshine Studio</p>
-                    </div>
-                    <div class="experience-item">
-                        <p><strong>Social Media Manager |</strong><br>
-                        2022-2023, WGSD Virtual Assistant Services</p>
-                    </div>
-                    <div class="experience-item">
-                        <p><strong>Virtual Apprentice |</strong> 2023,<br>
-                        Limitless Lab</p>
-                    </div>
-                    <div class="experience-item">
-                        <p><strong>Virtual Apprentice |</strong> 2022, Eight Media</p>
-                    </div>
-                </div> 
-        
-            <!-- Interests -->
-            <div class="info-box lighter-green">
-                <h3>Interests</h3>
-                <p>Journaling<br>Attending Events<br>Volunteering<br>Videography<br>Badminton</p>
-            </div>
-        
-            <!-- Stack -->
-            <div class="info-box stack-box">
-                <h3>Stack</h3>
-                <div class="stack-icons">
-                <img src="assets/icons/html.png" alt="HTML">
-                <img src="assets/icons/css.png" alt="CSS">
-                <img src="assets/icons/php.png" alt="PHP">
-                <img src="assets/icons/mysql.png" alt="MySQL">
-                <img src="assets/icons/powerbi.png" alt="PowerBi">
-                <img src="assets/icons/facebook.jpg" alt="Facebook">
-                <img src="assets/icons/pinterest.png" alt="Pinterest">
-                <img src="assets/icons/instagram.jpeg" alt="Instagram">
-                <img src="assets/icons/linkedin.png" alt="LinkedIn">
-                <img src="assets/icons/metab.png" alt="MetaB">
-                <img src="assets/icons/asana.png" alt="Asana">
-                <img src="assets/icons/trello.png" alt="Trello">
-                <img src="assets/icons/clickup.jpeg" alt="Clickup">
-                <img src="assets/icons/hootsuite.png" alt="Hootsuite">
-                <img src="assets/icons/word.jpg" alt="Word">
-                <img src="assets/icons/excel.jpg" alt="Excel">
-                <img src="assets/icons/canva.png" alt="Canva">
-                <img src="assets/icons/notion.png" alt="Notion">
-                <img src="assets/icons/slack.png" alt="Slack">
-                <img src="assets/icons/figma.png" alt="Figma">  
-                <img src="assets/icons/inshot.png" alt="Inshot">
-                <img src="assets/icons/capcut.jpg" alt="Capcut">
-                </div>
-            </div>
-            </div>
-        </section>
-  
-        <!-- Featured Projects Section -->
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <a href="marketing.html" class="project">
-                    <img src="assets/marketing.png" alt="Marketing">
-                    <h3>Marketing</h3>
-                </a>
-                <a href="technology.html" class="project">
-                    <img src="assets/tech.png" alt="Technology">
-                    <h3>Technology</h3>
-                </a>
-            </div> 
 
-            <!-- Individual Projects Section -->
-            <div class="container">
-              <div class="row">
-                <!-- Column 1 -->
-                <div class="col-md-6">
-                  <!-- Row 1: Title -->
-                  <div class="gallery-title">Redesign Responsive Website</div>
-                  <!-- Row 2: Card -->
-                  <div class="gallery-card">
-                    <img src="assets/IMG20190227144030.jpg" alt="Responsive Website" class="gallery-image">
-                    <div class="overlay-button">
-                      <a href="https://example.com/website-project" target="_blank" class="view-button">View Project</a>
-                    </div>
-                  </div>
+        </section>
+
+        <!-- My Services & Interests Section -->
+        <section class="services-section">
+            <h2 style="text-align: center;">My Services & Interests</h2>
+              <div class="services-columns">
+                <!-- UX/UI Column -->
+                <div class="services-column">
+                  <h3>Social Media Management</h3>
+                  <ul>
+                    <li>Strategy & Planning</li>
+                    <li>Graphic Designing</li>
+                    <li>Video Editing</li>
+                    <li>Content Creation</li>
+                    <li>Caption Copywriting</li>
+                    <li>Community Engagement</li>
+                    <li>Analytics Monitoring</li>
+                    <li>Social Media Audit</li>
+                  </ul>
                 </div>
+                
+                <!-- User Research Column -->
+                <div class="services-column">
+                  <h3>User Research</h3>
+                  <ul>
+                    <li>Design Thinking</li>
+                    <li>Empathy Map</li>
+                    <li>Journey Maps</li>
+                    <li>Surveys</li>
+                    <li>User Flows</li>
+                    <li>User Personas</li>
+                    <li>User Stories</li>
+                    <li>Notion</li>
+                  </ul>
+                </div>
+
+                <div class="services-column">
+                <h3>UX/UI</h3>
+                  <ul>
+                    <li>Design Thinking</li>
+                    <li>Double Diamond Process</li>
+                    <li>Figma</li>
+                    <li>Mood Board Creation</li>
+                    <li>Visual Composition</li>
+                    <li>Wireframing</li>
+                  </ul>
+                </div>
+
+                <div class="services-column">
+                  <h3>Project Management</h3>
+                    <ul>
+                      <li>Asana</li>
+                      <li>Trello</li>
+                      <li>Clickup</li>
+                      <li>Notion</li>
+                    </ul>
+                    <h3>Data Analytics</h3>
+                    <ul>
+                      <li>Microsoft Excel</li>
+                      <li>PowerBI</li>
+                      <li>MySQL</li>
+                    </ul>
+                  </div>
             
-                <!-- Column 2 -->
-                <div class="col-md-6">
-                  <!-- Row 1: Title -->
-                  <div class="gallery-title">Mobile Application</div>
-                  <!-- Row 2: Card -->
-                  <div class="gallery-card">
-                    <img src="assets/IMG20190227144030.jpg" alt="Mobile Application" class="gallery-image">
-                    <div class="overlay-button">
-                      <a href="https://example.com/mobile-app" target="_blank" class="view-button">View Project</a>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
+            </section>
             
+          </section>
             
-        </section>
-
         
+          <!-- Add this just before </body> -->
+          <button id="backToTopBtn" title="Back to Top">&#8679; Back to Top</button>
 
+          <script>
+          // Show button when scrolled near bottom
+          window.onscroll = function() {
+            const btn = document.getElementById("backToTopBtn");
+            if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 200)) {
+              btn.style.display = "block";
+            } else {
+              btn.style.display = "none";
+            }
+          };
+
+          // Scroll to top smoothly
+          document.getElementById("backToTopBtn").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          };
+          </script>
      
+        <!-- Scrolling "Contact me" Text -->
         <div class="scrolling-text">
             <div class="scrolling-text-content" id="scrollText">
                 <h2>
@@ -226,17 +212,36 @@
             </div>
         </div>
         
+        <!-- Footer Image -->
         <img src="assets/PB200372.JPG" alt="Footer image" class="footer-image">
         
+        <!-- Contact Section -->
         <div class="get-in-touch">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out for collaborations or just a friendly chat.</p>
-            <div class="circle-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
+          <section id="contact">
+            <div class="contact-container">
+              <!-- Left side: Contact Info -->
+              <div class="contact-info">
+                <img src="assets/pfp.png" alt="Your Photo" class="contact-photo">
+                <h3>Shaina Mae Totisano</h3>
+                <p>Student @University of Negros Occidental Recoletos</p>
+                <p>Email: smaetoti10@gmail.com</p>
+              </div>
+        
+              <!-- Right side: Contact Form -->
+              <form action="https://formsubmit.co/smaetoti10@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_redirect" value="https://inaachi25.github.io/PersonalWebsite/index.html">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              
+                <!-- Optional: Disable Formsubmit’s default CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
+              
+                <button type="submit">Send Message</button>
+              </form>
+              
+          </section>
         </div>
+        
     </div>
 </body>
 </html>
